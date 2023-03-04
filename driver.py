@@ -5,9 +5,9 @@ import train_model
 import configparser
 import predict
 
-training_dataset_path = pathlib.Path("/Users/moulis_mac/Desktop/AI/dataset")
+training_dataset_path = pathlib.Path("C:\Users\venne\Image_Recognition\dataset")
 model_exportpath = "face_recognizer.cv2"
-img = '/Users/moulis_mac/Downloads/kane_(103).jpg'
+img = 'kane_(103).jpg'
 recognizer = cv.face.LBPHFaceRecognizer_create()
 # To load trained recognizer, if recognizer is not found it will train on the dataset images
 try:
@@ -19,8 +19,5 @@ except Exception as e:
     print("Model trained successfully")
 
 predict.predict_person(recognizer, img)
-
-
-
 
 
